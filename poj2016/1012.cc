@@ -24,6 +24,7 @@ void test(int k){
     index=0;
     good=k;
     bad=k;
+    //kill next person
     index=(index+result)%(good+bad);
 /*    cout<<"\nres:"<<result//<<"good:"<<good<<" bad:"<<bad
       <<" i:"
@@ -31,16 +32,17 @@ void test(int k){
     while(true){
       if(bad==0)
         break;
-      //cout<<"index:"<<index<<" ";
+      /*cout<<"index:"<<index<<" ";*/
       //if kill good guy
       if(index<k){
         flag=false;
         break;
       }
+      //we have killed one bad guy
       bad--;
 /*      if(index!=(good+bad-1)) 
         index=(index+1)%(good+bad+1);*/
-      
+      // kill next person
       index=(index+result)%(good+bad);
     }
     if(flag){
