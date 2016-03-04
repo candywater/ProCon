@@ -1,7 +1,7 @@
 # programming contest challenge
 * poj=Peking University JudgeOnline,http://poj.org
 
-* aoj
+* aoj=Aizu Online Judge,http://judge.u-aizu.ac.jp/onlinejudge/
 
 --------
 
