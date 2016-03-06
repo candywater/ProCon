@@ -81,7 +81,7 @@ int main(void){
 
 
 /*
-tanorthle.insert(make_pair(n,5));
+table.insert(make_pair(n,5));
 table.insert(make_pair(s,2));
 table.insert(make_pair(u,1));
 table.insert(make_pair(b,6));
