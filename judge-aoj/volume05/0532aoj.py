@@ -3,13 +3,13 @@ while 1:
   try:
     h1,m1,s1,h2,m2,s2=map(int,input().split())
   except EOFError: break
-  '''
+  '''<- this is /* in c/c++
   m1=input()
   s1=input()
   h2=input()
   m2=input()
   s2=input()
-  '''
+  ''' 
 
   s1=s2+60-s1  
   s2=s1%60
@@ -21,5 +21,5 @@ while 1:
 
   h2=h2-h1-1+m1
 
-#print("d d d"%(h,m,s))
+#print("d d d"%(h,m,s)) <- wrong format
   print('%d'%h2,'%d'%m2,'%d'%s2)
