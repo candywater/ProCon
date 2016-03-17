@@ -3,6 +3,8 @@
 
 * aoj=Aizu Online Judge,http://judge.u-aizu.ac.jp/onlinejudge/
 
+- language:c++ std=c++99;c++ std=c++11;java 1.8;python3;
+
 --------
 
 2016Feb.14

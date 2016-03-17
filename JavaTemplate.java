@@ -1,3 +1,4 @@
+/*java 1.8*/
 import java.util.*;
 
 class Main{
