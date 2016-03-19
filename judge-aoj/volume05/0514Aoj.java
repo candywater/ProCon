@@ -1,3 +1,4 @@
+/*java 1.8*/
 import java.util.*;
 
 class Main{
@@ -17,10 +18,10 @@ class Main{
       Arrays.fill(b,2);
       Arrays.fill(c,2);
       //ok=1; not ok=0; dont know=2
-      
+
       int ta,tb,tc;
       int res;
-     
+
       int table[][]=new int [n][4];
       for(int ix=0;ix<n;ix++)
         for(int iy=0;iy<4;iy++)
@@ -71,7 +72,7 @@ class Main{
     else if(b[tb]==1&&c[tc]==1){
       a[ta]=0;return;
     }
-    
+
   }
-    
+
 }

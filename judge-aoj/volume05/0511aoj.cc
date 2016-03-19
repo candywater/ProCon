@@ -1,3 +1,4 @@
+/*c++98*/
 #include <cstdio>
 #include <iostream>
 #include <algorithm>

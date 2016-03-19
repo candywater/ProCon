@@ -1,3 +1,4 @@
+/*c++98*/
 #include <iostream>
 #include <cstdio>
 #include <cstring>
@@ -29,7 +30,7 @@ int main(void){
   while(cin>>x>>y,x&&y){
     int n;
     cin>>n;
-  
+
     trap.clear();
     trap.resize(x+1, vector<int>(y+1,0));
     //int trap[x+1][y+1];
@@ -113,7 +114,7 @@ if(a==x && j==y){
 res++;
 return;
 }
-if(a<x) 
+if(a<x)
 if(trap[a+1][j]!=1)
 solve(a+1,j,trap);
 if(j<y)
@@ -122,4 +123,3 @@ solve(a,j+1,trap);
 }
 }
  */
-

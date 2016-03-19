@@ -1,3 +1,4 @@
+/*c++11*/
 #include <cstdio>
 #include <iostream>
 #include <algorithm>

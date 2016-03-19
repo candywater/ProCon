@@ -1,3 +1,4 @@
+/*c++98*/
 #include <cstdio>
 #include <iostream>
 #include <algorithm>
@@ -55,7 +56,7 @@ int main(int args, char *argc[]){
       cin>>k;
       if(k)
         cut(k,card);
-      else 
+      else
         shuffle(card);
  //     p(card);
     }

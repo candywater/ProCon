@@ -1,3 +1,4 @@
+/*java 1.8*/
 import java.util.*;
 import java.math.*;
 
@@ -16,7 +17,7 @@ class Main{
       for(int i=0;i<n;i++){
         table[i]=scan.nextInt();
       }
-      
+
       int res=0;
       int max=0;
       int imax=0;
@@ -28,7 +29,7 @@ class Main{
           imax=i-k+1;
         }
       }
-      
+
       long out=0;
       for(int i=imax;i<imax+k;i++){
         out+=table[i];
