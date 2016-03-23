@@ -1,3 +1,4 @@
+/*java 1.7*/
 import java.util.*;
 import java.math.*;
 
