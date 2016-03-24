@@ -1,3 +1,7 @@
+# folder
+dustbin/
+will-think-twice/
+
 # Compiled Object files
 *.slo
 *.lo
@@ -28,10 +32,12 @@
 *.app
 
 #Java
-*.java
 *.jar
 *.war
 *.ear
+
+#class
+*.class
 
 #Eclipse
 .project
