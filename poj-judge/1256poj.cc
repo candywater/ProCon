@@ -1,4 +1,5 @@
 /*c++11*/
+/*248K 188MS C++ 98*/
 #include <cstdio>
 #include <iostream>
 #include <algorithm>
@@ -24,7 +25,8 @@ void backtrack(string str,string res, bitset<15> mark, int pos){
   if(strCompare(repeat,res) > 0) return;
   if(res.length()==str.length()){
     repeat=res;
-    cout<<res<<endl;
+    //cout<<res<<endl;
+    printf("%s\n",res.c_str());
   }
   for(int i=0;i<str.length();i++){
     if(mark[i]==true)
