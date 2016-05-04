@@ -3,6 +3,9 @@ dustbin/
 will-think-twice/
 2.t
 
+#mac
+.DS_Store
+
 # Compiled Object files
 *.slo
 *.lo
