@@ -2,6 +2,7 @@
 dustbin/
 will-think-twice/
 2.t
+*.swp
 
 #mac
 .DS_Store
