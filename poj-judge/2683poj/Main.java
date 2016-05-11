@@ -25,7 +25,6 @@ public class Main{
     n = sc.nextInt();
     BigDecimal[] itr = new BigDecimal[n];
 
-    //無言で渡すと、nullに自動変換される
     for(int i=0;i<n;i++){
       money = money_bak;
       mod = sc.nextInt();
