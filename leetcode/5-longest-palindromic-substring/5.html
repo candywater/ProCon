@@ -14,6 +14,7 @@ var longestPalindrome = function(s) {
   var lcs = 0
   var t = [[]]
   var len = s.length
+
   //init
   for(var i = 1; i < len; i++){
     if(s[i] == r[0]) {
@@ -33,37 +34,16 @@ var longestPalindrome = function(s) {
       if(s[i] == r[j]){
         t[i].push(t[i-1][j-1] + 1)
         if(t[i][j] > lcs){
-          //console.log(t[i][j] + " " + i + " " + j);
           //normal_str start pos = reverse_str's end pos
           if( i + 1 - t[i][j] ==  len - j - 1){
             lcs = t[i][j]
             epos = i;
           }
+        }
       }
       else t[i].push(0)
   }
-
-  /*
-  for(var i = 0; i < len; i++){
-    for(var j = 0; j < len; j++){
-      if(t[i][j] > lcs){
-        //console.log(t[i][j] + " " + i + " " + j);
-        //normal_str start pos = reverse_str's end pos
-        if( i + 1 - t[i][j] ==  len - j - 1){
-          lcs = t[i][j]
-          epos = i;
-        }
-      }
-    }
-  }*/
-  /*
-  console.log(s);
-  console.log(r);
-  showhand(t);
-  console.log(epos);
-  console.log(lcs);
-  console.log("res:" + s.substr(epos - lcs + 1, lcs));*/
-  return s.substr(epos - lcs + 1, lcs)
+  return  lcs == 0 ? s[0] : s.substr(epos - lcs + 1, lcs)
 };
 
 function reverseStr(s){
@@ -89,6 +69,8 @@ longestPalindrome("abcdasdfghjkldcba")
     </script>
   </head>
   <body>
+    test case
+    /*"gphyvqruxjmwhonjjrgumxjhfyupajxbjgthzdvrdqmdouuukeaxhjumkmmhdglqrrohydrmbvtuwstgkobyzjjtdtjroqpyusfsbjlusekghtfbdctvgmqzeybnwzlhdnhwzptgkzmujfldoiejmvxnorvbiubfflygrkedyirienybosqzrkbpcfidvkkafftgzwrcitqizelhfsruwmtrgaocjcyxdkovtdennrkmxwpdsxpxuarhgusizmwakrmhdwcgvfljhzcskclgrvvbrkesojyhofwqiwhiupujmkcvlywjtmbncurxxmpdskupyvvweuhbsnanzfioirecfxvmgcpwrpmbhmkdtckhvbxnsbcifhqwjjczfokovpqyjmbywtpaqcfjowxnmtirdsfeujyogbzjnjcmqyzciwjqxxgrxblvqbutqittroqadqlsdzihngpfpjovbkpeveidjpfjktavvwurqrgqdomiibfgqxwybcyovysydxyyymmiuwovnevzsjisdwgkcbsookbarezbhnwyqthcvzyodbcwjptvigcphawzxouixhbpezzirbhvomqhxkfdbokblqmrhhioyqubpyqhjrnwhjxsrodtblqxkhezubprqftrqcyrzwywqrgockioqdmzuqjkpmsyohtlcnesbgzqhkalwixfcgyeqdzhnnlzawrdgskurcxfbekbspupbduxqxjeczpmdvssikbivjhinaopbabrmvscthvoqqbkgekcgyrelxkwoawpbrcbszelnxlyikbulgmlwyffurimlfxurjsbzgddxbgqpcdsuutfiivjbyqzhprdqhahpgenjkbiukurvdwapuewrbehczrtswubthodv"*/
 
   </body>
 </html>
