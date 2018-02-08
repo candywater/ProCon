@@ -16,42 +16,31 @@ var longestPalindrome = function(s) {
   var t = new Array(len)
 
   //init
-  for(var i = 0; i < len; i++) t[i] = new Array(len)
-  for(var i = 1; i < len; i++){
+  for(var i = 0; i < len; i++){
     if(s[i] == r[0]) {
-      t[i][0] = 1;
+      t[i] = 1;
     }
-    else t[i][0] = 0
-  }
-  for(var j = 0; j < len; j++){
-    if(s[0] == r[j]){
-      t[0][j] = 1
-    }
-    else t[0][j] = 0
+    else t[i] = 0
   }
 
-  for(var i = 1; i < len; i++){
-    for(var j = 1; j < len; j++)
-      if(s[i] == r[j]){
-        t[i][j] = t[i-1][j-1] + 1
-        if(t[i][j] > lcs){
-          //console.log(t[i][j] + " " + i + " " + j);
-          //normal_str start pos = reverse_str's end pos
-          if( i + 1 - t[i][j] ==  len - j - 1){
-            lcs = t[i][j]
-            epos = i;
-          }
-        }
-      }
-      else t[i][j] = 0
+  for(var j = 1; j < len; j++){
+   //show(t)
+    for(var i = len; i > 0; i--){
+     if(s[i] == r[j]){
+       t[i] = t[i-1] + 1
+       if(t[i] > lcs){
+         //normal_str start pos = reverse_str's end pos
+         if( i + 1 - t[i] ==  len - j - 1){
+           lcs = t[i]
+           epos = i;
+         }
+       }
+     }
+     else t[i] = 0
+    }
+    if(s[0] == r[j])  t[0]= 1
+    else t[0]==0
   }
-  /*console.log(s);
-  console.log(r);
-  showhand(t);
-  console.log(epos);
-  console.log(lcs);
-  console.log("res:" + (lcs == 0 ? s[0] : s.substr(epos - lcs + 1, lcs)));
-*/
   return  lcs == 0 ? s[0] : s.substr(epos - lcs + 1, lcs)
 };
 
