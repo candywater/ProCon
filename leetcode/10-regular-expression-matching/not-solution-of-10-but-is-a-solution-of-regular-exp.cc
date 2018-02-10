@@ -24,8 +24,8 @@ public:
 
     bool expr(string s, string r, size_t spos, size_t rpos){
       //cout << "[str] " << "s:" << s << " r:" << r << " spos:" << spos << " rpos:" << rpos << endl;
-      if(spos >= s.size() && rpos >= s.size()) return true;
-      if(spos >= s.size() || rpos >= s.size()) return false;
+      if(spos >= s.size() && rpos >= r.size()) return true;
+      if(spos >= s.size() || rpos >= r.size()) return false;
       if(r[rpos] == '.')
         return term(s, r, spos + 1, rpos + 1);
       return term(s, r, spos, rpos);
@@ -33,8 +33,8 @@ public:
 
     bool term(string s, string r, size_t spos, size_t rpos){
       //cout << "[expr] " << "s:" << s << " r:" << r << " spos:" << spos << " rpos:" << rpos << endl;
-      if(spos >= s.size() && rpos >= s.size()) return true;
-      if(spos >= s.size() || rpos >= s.size()) return false;
+      if(spos >= s.size() && rpos >= r.size()) return true;
+      if(spos >= s.size() || rpos >= r.size()) return false;
       size_t rnext = rpos < r.size() - 1 ? rpos + 1 : rpos;
       while(r[rpos] == '*' && r[rnext] != s[spos]) spos++;
       if(r[rpos] == '*')
@@ -44,8 +44,8 @@ public:
 
     bool str(string s, string r, size_t spos, size_t rpos){
       //cout << "[term] " << "s:" << s << " r:" << r << " spos:" << spos << " rpos:" << rpos << endl;
-      if(spos >= s.size() && rpos >= s.size()) return true;
-      if(spos >= s.size() || rpos >= s.size()) return false;
+      if(spos >= s.size() && rpos >= r.size()) return true;
+      if(spos >= s.size() || rpos >= r.size()) return false;
       if(r[rpos] == '.' || r[rpos] == '*')
         return expr(s, r, spos, rpos);
       else if(r[rpos] == s[spos])
