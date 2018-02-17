@@ -7,6 +7,11 @@
 
 --------
 
+2018 Feb 9th
+目標：leetcode 200問以上徳事
+
+--------
+
 2016Feb.14
 begin to solve some problems for fun.
 decided not to solve all the problems on the net.

@@ -1,5 +1,0 @@
-#####aoj
-
----
-
-######AIZU ONLINE JUDGE
