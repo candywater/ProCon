@@ -4,10 +4,10 @@ leetcode, which is a online judgement programming site.
 it contains many interesting classic problems.
 and some solutions of them.
 
-![goal](../lib/icons/leetcode-goal-green-0.svg)
-![easy](../lib/icons/leetcode-goal-green-easy.svg)
-![medium](../lib/icons/leetcode-goal-orange-medium.svg)
-![hard](../lib/icons/leetcode-goal-red-hard.svg)
+![goal](../lib/icons/leetcode-readme-num/goal-green.svg)
+![easy](../lib/icons/leetcode-readme-num/leetcode-easy.svg)
+![medium](../lib/icons/leetcode-readme-num/leetcode-medium.svg)
+![hard](../lib/icons/leetcode-readme-num/leetcode-hard.svg)
 
 
 here is my list of my interesting solutions
@@ -18,7 +18,7 @@ here is my list of my interesting solutions
 
 - dfs problems(easy ones)
 
-  114, 113, 112, 111, 109, 108, 107, 104, ...
+  114, 113, 112, 111, 109, 108, 107, 104, 653 ...
 
 - 53 maximum subarray
 
