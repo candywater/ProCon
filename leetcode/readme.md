@@ -9,7 +9,6 @@ and some solutions of them.
 ![medium](../lib/icons/leetcode-goal-orange-medium.svg)
 ![hard](../lib/icons/leetcode-goal-red-hard.svg)
 
-![hard](../lib/icons/leetcode-goal-orange.svg)
 
 here is my list of my interesting solutions
 
