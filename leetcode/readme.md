@@ -7,7 +7,7 @@ and some solutions of them.
 ![goal](../lib/icons/leetcode-readme-num/goal-green.svg)
 ![easy](../lib/icons/leetcode-readme-num/leetcode-easy.svg)
 ![medium](../lib/icons/leetcode-readme-num/leetcode-medium.svg)
-![hard](../lib/icons/leetcode-readme-num/leetcode-hard.svg)
+![hard](../lib/icons/leetcode-readme-num/leetcode-mhard.svg)
 
 
 here is my list of my interesting solutions
