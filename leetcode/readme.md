@@ -4,6 +4,8 @@ leetcode, which is a online judgement programming site.
 it contains many interesting classic problems.
 and some solutions of them.
 
+![../lib/icons/leetcode-goal-green.svg]
+
 here is my list of my interesting solutions
 
 - 52.n queens
@@ -23,4 +25,4 @@ here is my list of my interesting solutions
   3.LCS...
 
 
-[https://leetcode.com](https://leetcode.com)
+[https://leetcode.com/problemset/all/](https://leetcode.com/problemset/all/)
