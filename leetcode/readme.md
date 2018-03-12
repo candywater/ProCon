@@ -4,7 +4,7 @@ leetcode, which is a online judgement programming site.
 it contains many interesting classic problems.
 and some solutions of them.
 
-![../lib/icons/leetcode-goal-green.svg]
+![goal](../lib/icons/leetcode-goal-green.svg)
 
 here is my list of my interesting solutions
 
