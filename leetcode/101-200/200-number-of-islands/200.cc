@@ -12,7 +12,7 @@ class Solution {
   const vector<int> dy = {0, -1, 0, 1};
 public:
   int numIslands(vector<vector<char>>& grid) {
-    //follow https://leetcode.com/problems/number-of-islands/discuss/56347/Simple-Java-Solution
+    //ref: https://leetcode.com/problems/number-of-islands/discuss/56347/Simple-Java-Solution
     // O(n^2)
     int count = 0;
     for(int i = 0; i < static_cast<int>(grid.size()); i++){
