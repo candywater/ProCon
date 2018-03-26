@@ -5,8 +5,6 @@ class Solution {
     "ghi", "jkl", "mno",
     "pqrs", "tuv", "wxyz"
   };
-  vector<int> three;
-  vector<int> four;
 public:
   vector<string> letterCombinations(string digits) {
     vector<string> res;
