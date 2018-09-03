@@ -28,5 +28,7 @@ here is my list of my interesting solutions
 
   3.LCS...
 
+- hard problem list
+  4, 10, 23, 51, 52, 128...
 
 [https://leetcode.com/problemset/all/](https://leetcode.com/problemset/all/)
