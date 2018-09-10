@@ -1,5 +1,7 @@
-##### aoj volume11
+## aoj
 
----
+Aizu Online Judge [http://judge.u-aizu.ac.jp/onlinejudge/](http://judge.u-aizu.ac.jp/onlinejudge/)
 
-ACM-ICPC Japan Domestic Contest.
+残念ながら中国からブロックされており、
+（おそらくグーグルのサービスを利用しているのが原因）
+VPNを使わなければつながらない。
