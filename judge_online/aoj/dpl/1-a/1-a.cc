@@ -26,25 +26,24 @@ int main(int args, char *argc[]){
   }
   dp(coins, ints, 1);
 
-  //cout << endl;
   cout << ints[n] << endl;
 
   return 0;
 }
 
+//dp: subproblem - minium num of coins use to achieve specific number.
+//dp[i]:a
+//i: specific number
+//a: minium number
 void dp(set<int>& coins, vector<int>& ints, int pos){
   if(pos == static_cast<int>(ints.size())) return;
-  int min = INT_MAX;
+  int minnum = INT_MAX;
   for(auto i = coins.begin(); i != coins.end(); i++){
-    //cout << *i << " " ;//debug
     if(*i > pos) break;
     int tmp = ints[pos - *i] + 1;
-    min = min < tmp ? min : tmp;
-    //cout << "pos:" << pos;
-    //show(ints);
-    //cout << "tmp:" << tmp << " " ;//debug
+    minnum = min(minnum, tmp);
   }
-  ints[pos] = min;
+  ints[pos] = minnum;
   dp(coins, ints, pos + 1);
 }
 

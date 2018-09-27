@@ -27,6 +27,10 @@ int main(void){
     weights[i] = tmpweight;
   }
 
+  //dplist[i] : a
+  //i : weight
+  //a : maxium value
+  //subproblem: maxium value at that weight
   for(auto i = 0; i < n; ++i){
     for(auto j = m; j >= 1; --j){
       if(weights[i] <= j){
