@@ -35,6 +35,7 @@ int main(int args, char *argc[]){
 //dp[i]:a
 //i: specific number
 //a: minium number
+//bottom up way
 void dp(set<int>& coins, vector<int>& ints, int pos){
   if(pos == static_cast<int>(ints.size())) return;
   int minnum = INT_MAX;

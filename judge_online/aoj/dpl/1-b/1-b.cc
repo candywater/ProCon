@@ -31,6 +31,7 @@ int main(void){
   //i : weight
   //a : maxium value
   //subproblem: maxium value at that weight
+  //bottom up
   for(auto i = 0; i < n; ++i){
     for(auto j = m; j >= 1; --j){
       if(weights[i] <= j){
