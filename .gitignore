@@ -1,8 +1,7 @@
-# folder
-dustbin/
-will-think-twice/
-notfinished/
-2.t
+# testdata
+input*
+
+# temp file 
 *.swp
 
 #mac
