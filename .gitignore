@@ -1,5 +1,7 @@
 # testdata
 input*
+.vscode
+.out
 
 # temp file 
 *.swp
