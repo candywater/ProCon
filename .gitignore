@@ -1,6 +1,7 @@
 # testdata
 input*
 __*
+_*
 .vscode
 .out
 
