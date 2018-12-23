@@ -1,8 +1,10 @@
 # programming contest challenge
 
-* poj=Peking University JudgeOnline,http://poj.org
+- leetcode ![goal](../lib/icons/leetcode-readme-num/goal-green.svg)
 
-* aoj=Aizu Online Judge,http://judge.u-aizu.ac.jp/onlinejudge/
+- aoj ![aoj](../lib/icons/aoj/aoj.svg)
+
+- poj ![poj](../lib/icons/poj/poj.svg)
 
 - language:c++;java;python3;coffeescript;ruby;
 
@@ -15,7 +17,8 @@
 
 2016Feb.14
 begin to solve some problems for fun.
-decided not to solve all the problems on the net.
+decided not to solve all the problems in order on the net.  
+(which means that I do not to solve problem that too hard for me)(しらみつぶしはしない。)
 
 --------
 
