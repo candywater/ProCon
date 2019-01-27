@@ -4,6 +4,7 @@ __*
 _*
 .vscode
 .out
+.code-workspace
 
 # temp file 
 *.swp
