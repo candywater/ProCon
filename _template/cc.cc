@@ -6,6 +6,9 @@
 
 using namespace std;
 
+vector<int> dx = {0, 1, 0, -1};
+vector<int> dy = {1, 0, -1, 0};
+
 template<typename T> 
 void show(T a){
   for(auto i : a){ cout << i << " "; }
