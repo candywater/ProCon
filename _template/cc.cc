@@ -19,6 +19,9 @@ void showmatrix(T a){
   for(auto j: a){for(auto i : j){ cout << i; }cout << endl;}
   cout << endl;
 }
+void check(int i = 0){
+  cout << "checkpoint:[" << i << "]" << endl;
+}
 
 
 int main(int argc, char *argv[]){

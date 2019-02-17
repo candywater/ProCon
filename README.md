@@ -17,6 +17,14 @@
 
 - language:c++;java;python3;coffeescript;ruby;
 
+---
+
+2019 Feb 17th  
+leetcodeをプロコンサイトとして使うといろいろと不便のため、　  
+(pythonでqueue使えなかったり)  
+200制覇のを断念  
+atcoderに移りつつある
+
 --------
 
 2018 Feb 9th
