@@ -2,16 +2,12 @@
 
 - leetcode  
 ![goal](lib/icons/leetcode-readme-num/goal-green.svg)  
-
 - aoj  
-![aoj](lib/icons/aoj/aoj.svg)
-
+![aoj](lib/icons/aoj/aoj.svg)  
 - poj  
-![poj](lib/icons/poj/poj.svg)
-
+![poj](lib/icons/poj/poj.svg)  
 - atcoder  
-![atcoder](lib/icons/atcoder/atcoder.svg)
-
+![atcoder](lib/icons/atcoder/atcoder.svg)  
 - codeforces  
 ![codeforces](lib/icons/codeforces/codeforces.svg)  
 
