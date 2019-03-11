@@ -1,15 +1,10 @@
 # programming contest challenge
 
-- leetcode  
-![goal](lib/icons/leetcode-readme-num/goal-green.svg)  
-- aoj  
-![aoj](lib/icons/aoj/aoj.svg)  
-- poj  
-![poj](lib/icons/poj/poj.svg)  
-- atcoder  
-![atcoder](lib/icons/atcoder/atcoder.svg)  
-- codeforces  
-![codeforces](lib/icons/codeforces/codeforces.svg)  
+leetcode  ![goal](lib/icons/leetcode-readme-num/goal-green.svg)  
+aoj  ![aoj](lib/icons/aoj/aoj.svg)  
+poj  ![poj](lib/icons/poj/poj.svg)  
+atcoder  ![atcoder](lib/icons/atcoder/atcoder.svg)  
+codeforces  ![codeforces](lib/icons/codeforces/codeforces.svg)  
 
 - language:c++;java;python3;coffeescript;ruby;
 
