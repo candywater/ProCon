@@ -40,19 +40,20 @@ function isMatchA(pattern, val, a, first = "a"){
     for(var j = res.length; j <= val.length; j++){
       // set b, from the end of a
       var b = val.substring(res.length, j);
-      if(isMatchB(pattern, val, a, b, first)) 
+      //console.log(`res:[${res}] `)
+      if(isMatchB(pattern, val, a, b, first, res, i)) 
         return true;
     }
+    break;
   }
   // only "a" exist
   if(res == val && isSingle)  return true;
   return false;
 }
 
-function isMatchB(pattern, val, a, b, first){
-  var res = "";
+function isMatchB(pattern, val, a, b, first, res, index){
   if(a == b) return false;
-  for(var i = 0; i < pattern.length; i++){
+  for(var i = index; i < pattern.length; i++){
     // cut edge
     if(res.length > val.length) 
       return false;
@@ -61,6 +62,7 @@ function isMatchB(pattern, val, a, b, first){
     else
       res += b;
   }
+  //console.log(`res:[${res}] index:[${index}] a:${a} b:${b}`)
   if(res == val) return true;
   return false;
 }
@@ -89,10 +91,11 @@ debug(patternMatching("abba", "dogdogdogdog"), true);
 debug(patternMatching("a", ""), true);
 debug(patternMatching("ab", ""), false);
 debug(patternMatching("bbbbbbbbabbbbbbbbbbbabbbbbbba", "zezezezezezezezezkxzezezezezezezezezezezezkxzezezezezezezezkx"), true);
+debug(patternMatching("bbaba",
+"ajocitdfyhohchqvilvdjjocitdfyhohchqvilvdj"), false);
 debug(patternMatching("", ""), true);
 debug(patternMatching("bbb","xxxxxx"), true);
-debug(patternMatching("abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbabbbb",
-"yxankynynxnxnxxyxyyyxxakxanaxnankyykxxannxayyyaxakyyyxxyxyyxxkxyyyyxnxxyykayyanayxayknayxyyynyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyykxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyyxankynynxnxnxxyxyyyxxakxanaxnankyykxxannxayyyaxakyyyxxyxyyxxkxyyyyxnxxyykayyanayxayknayxyyynyxxykykyyxxykykyyxxxykykyy"), false);
+debug(patternMatching("abbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbabbbb", "yxankynynxnxnxxyxyyyxxakxanaxnankyykxxannxayyyaxakyyyxxyxyyxxkxyyyyxnxxyykayyanayxayknayxyyynyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyykxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyxxykykyyyxankynynxnxnxxyxyyyxxakxanaxnankyykxxannxayyyaxakyyyxxyxyyxxkxyyyyxnxxyykayyanayxayknayxyyynyxxykykyyxxykykyyxxxykykyy"), false);
 
 
 //patternMatching("abab", "abcdefg")
