@@ -6,20 +6,22 @@
 
 var isSingle = false;
 
-var patternMatching = function(pattern, v) {
+// all search
+var patternMatching = function(pattern, val) {
   // special case
-  if(pattern.length == 0 && v.length == 0) return true;
+  if(pattern.length == 0 && val.length == 0) return true;
   if(pattern.length == 0) return false;
   isSingle = isSinglePattern(pattern)
-  if(isSingle && v.length == 0) return true;
+  if(isSingle && val.length == 0) return true;
 
   var first = "";
   if(pattern.length > 0)
     first = pattern[0];
 
-  for(var i = 0; i <= v.length; i++){
-    var a = v.substring(0, i);
-    if(isMatchA(pattern, v, a, first)) return true;
+  for(var i = 0; i <= val.length; i++){
+    var a = val.substring(0, i);
+    if(isMatchA(pattern, val, a, first)) 
+      return true;
   }
   return false;
 };
@@ -27,17 +29,19 @@ var patternMatching = function(pattern, v) {
 // start from A
 function isMatchA(pattern, val, a, first = "a"){
   var res = "";
-  //console.log(`a:[${a}]  `)
   for(var i = 0; i < pattern.length; i++){
-    if(res.length > val.length) return false;
+    // cut edge
+    if(res.length > val.length) 
+      return false;
     if(pattern[i] == first){
       res += a;
       continue;
     }
     for(var j = res.length; j <= val.length; j++){
+      // set b, from the end of a
       var b = val.substring(res.length, j);
-      //console.log(`a:[${a}]  b:[${b}]`)
-      if(isMatchB(pattern, val, a, b, i, first)) return true
+      if(isMatchB(pattern, val, a, b, first)) 
+        return true;
     }
   }
   // only "a" exist
@@ -45,19 +49,18 @@ function isMatchA(pattern, val, a, first = "a"){
   return false;
 }
 
-function isMatchB(pattern, val, a, b, index, first){
+function isMatchB(pattern, val, a, b, first){
   var res = "";
-  //console.log(`res before: [${res}]`)
   if(a == b) return false;
   for(var i = 0; i < pattern.length; i++){
-    if(res.length > val.length) return false;
+    // cut edge
+    if(res.length > val.length) 
+      return false;
     if(pattern[i] == first)
       res += a;
     else
       res += b;
   }
-  //console.log(`res after: [${res}] a:[${a}]  b:[${b}] `)
-  //console.log(`a:[${a}]  b:[${b}] index:[${index}] res: [${res}]`)
   if(res == val) return true;
   return false;
 }
