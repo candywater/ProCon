@@ -20,19 +20,21 @@ function knapsack_multi(){
   }
 
   // dp 
-  // bottom - up
+  // top - down
   showlist(dp)
 
-  for (var i = 1; i <= w.length; i++) {
-    for (var j = 1; j <= maxWeight; j++) {
-      if (j + w[i - 1] > maxWeight)
-        dp[i][j] = dp[i - 1][j];
+  for (var i = w.length-1; i >= 0; i--) {
+    for (var j = maxWeight-1; j >= 0; j--) {
+      if (j - w[i] < 0)
+        dp[i][j] = dp[i + 1][j];
       else
-        dp[i][j] = max(dp[i - 1][j], dp[i-1][j + w[i - 1]] + v[i - 1]);
+        dp[i][j] = max(dp[i + 1][j], dp[i+1][j - w[i]] + v[i]);
     }
     showlist(dp)
   }
-  console.log(dp[w.length][maxWeight - targetW])
+
+  console.log(dp[0][targetW])
+
 }
 
 
