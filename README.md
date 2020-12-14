@@ -1,18 +1,8 @@
 ## programming contest challenge
 
-  - leetcode  
-  - aoj 
-  - poj 
-  - atcoder 
-  - codeforces 
-
+  - leetcode / aoj / poj / atcoder / codeforces 
   - language:
-    + c++
-    + java
-    + python3
-    + coffeescript
-    + js
-    + ruby
+    + c++ / java / python3 / coffeescript / js / ruby
 
 ## logs
 
