@@ -7,12 +7,12 @@
   - codeforces 
 
   - language:
-    +c++;
-    +java;
-    +python3;
-    +coffeescript;
-    +js;
-    +ruby;
+    + c++
+    + java
+    + python3
+    + coffeescript
+    + js
+    + ruby
 
 ## logs
 
