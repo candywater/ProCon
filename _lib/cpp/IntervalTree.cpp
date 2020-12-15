@@ -1,5 +1,7 @@
 //セグメントツリー
 //区間木
+#include <vector>
+using namespace std;
 
 class IntervalTree{
 public:

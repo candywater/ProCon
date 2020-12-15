@@ -1,3 +1,7 @@
+#include <vector>
+using namespace std;
+
+  vector<int> s; // contains nodes that do not contains parents
   vector< int > itsparent; // contains its parents
   vector< int > itschild;// contains its children
   vector< int > res;
@@ -8,7 +12,6 @@
     for(int j : itschild[i]){
       itschild[i].erase(j);
       itsparent[j].erase(i);
-      show(itsparent[j]);
       if(itsparent[j].empty()) {
         s.insert(j);
       }
