@@ -10,7 +10,7 @@ using namespace std;
 template <typename T>
 void show(T a) {
   for (auto i : a) {
-    cout << i.first << " " << i.second << " ";
+    cout << i << " ";
   }
   cout << endl;
 }
@@ -31,36 +31,6 @@ void check(char i = ' ', int j = 0) {
   cout << "checkpoint:[" << i << "," << j << "]" << endl;
 }
 
-unordered_map<char, int> map;
-
-void add(char c) {
-  if (map.count(c) > 0) {
-    map[c] += 1;
-  } else {
-    map[c] = 1;
-  }
-}
-
-long sum(char c) {
-  int csum = map[c];
-  int real_sum = 0;
-  for (auto i : map) {
-    real_sum += i.second;
-  }
-  return real_sum - csum;
-}
-
-long operate(char c) {
-  long counter = 0;
-  for (auto i = map.begin(); i != map.end(); ++i) {
-    if (i->first == c) continue;
-    map[c] += i->second;
-    counter += i->second;
-    i->second = 0;
-  }
-  return counter;
-}
-
 int main(int argc, char *argv[]) {
   ios::sync_with_stdio(false);
   cin.tie(NULL);
@@ -68,27 +38,82 @@ int main(int argc, char *argv[]) {
   string str;
   cin >> str;
 
-  // show(map);
+  if (str.size() <= 0) return 0;
 
-  // map = {{'a', 2}, {'b', 3}, {'c', 0}};
-  // operate('c');
+  // https://atcoder.jp/contests/arc113/editorial/710
+  // block: aaaa in aaaasss
+  // block: bbb in abdbbbd
 
-  // show(map);
+  vector<int> pos;
+  vector<char> block;
+  vector<int> blocklen;
 
-  long res = 0;
-
-  char tmp = str[str.size() - 1];
-  add(tmp);
-  for (long i = str.size() - 2; i >= 0; i--) {
-    char t2 = str[i];
-    if (t2 == tmp) {
-      res += operate(t2);
-    } else {
-      add(t2);
-      tmp = t2;
+  // collect blocks
+  char tmp = str[0];
+  for (int i = 1; i < str.size(); i++) {
+    if (tmp == str[i]) {
+      pos.push_back(i - 1);
+      block.push_back(str[i]);
+      int len = 2;
+      while (tmp == str[++i]) {
+        len++;
+      }
+      blocklen.push_back(len);
     }
-    check(t2, res);
+    if (tmp != str[i]) {
+      tmp = str[i];
+    }
   }
+
+  show(pos);
+  show(block);
+  show(blocklen);
+
+  int res = 0;
+
+  int j = 0;
+  tmp = block[j];
+  for (int i = pos[j] + blocklen[j]; i < str.size(); i = pos[j] + blocklen[j]) {
+    while (i < str.size() && tmp != str[i++]) {
+      res++;
+    }
+    j++;
+    while (j < block.size() && (block[j] == block[j - 1] || pos[j] < i)) {
+      j++;
+    }
+    tmp = block[j];
+  }
+
+  // // analyze blocks
+  // // if same blocks, merge them
+  // for (int i = 0; i + 1 < pos.size(); i++) {
+  //   if (block[i] == block[i + 1]) {
+  //     blocklen[i] += blocklen[i + 1];
+  //     pos[i + 1] = -1;
+  //     block[i + 1] = '\0';
+  //     blocklen[i + 1] = -1;
+  //   }
+  // }
+
+  // // erase them
+  // for (int i = pos.size() - 1; i >= 0; i--) {
+  //   if (pos[i] == -1) {
+  //     pos.erase(pos.begin() + i);
+  //     block.erase(block.begin() + i);
+  //     blocklen.erase(blocklen.begin() + i);
+  //   }
+  // }
+
+  // long res = 0;
+  // for (int i = 0; i + 1 < pos.size(); i++) {
+  //   int left = pos[i];
+  //   int right = pos[i + 1];
+  //   res += (right - left) - blocklen[i];
+  // }
+  // int left = pos[pos.size() - 1];
+  // int right = str.size();
+  // cout << "left:" << left << " right:" << right << endl;
+  // res += (right - left) - blocklen[blocklen.size() - 1];
 
   cout << res << endl;
 }
