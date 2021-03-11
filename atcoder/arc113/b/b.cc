@@ -70,13 +70,13 @@ int main(int argc, char *argv[]){
   // cout << getNum(7, 4) << endl;
   // cout << getNum(7, 5) << endl;
 
-  int a, b, c;
-  cin >> a >> b>> c;
-  if( c == 0)
-    b = 1;
+  // int a, b, c;
+  // cin >> a >> b>> c;
+  // if( c == 0)
+  //   b = 1;
 
-  int r = getNum(a, b);
+  // int r = getNum(a, b);
 
-  cout << r <<endl;
+  // cout << r <<endl;
 
 }
