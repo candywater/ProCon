@@ -8,7 +8,8 @@
 #include <utility>
 #include <vector>
 
-#define rep(i, n) for (int i = 0; i < (int)(n); i++)
+#define rep(i, n) for (size_t i = 0; i < (size_t)(n); i++)
+#define rep2(i, s, n) for (size_t i = (s); i < (size_t)(n); i++)
 
 using namespace std;
 using ll = long long;
