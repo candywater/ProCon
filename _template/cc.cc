@@ -1,15 +1,17 @@
 #include <algorithm>
+#include <climits>
 #include <iostream>
+#include <stack>
 #include <string>
 #include <unordered_map>
 #include <unordered_set>
 #include <utility>
 #include <vector>
-#include <climits>
-#include <stack>
+
+#define rep(i, n) for (int i = 0; i < (int)(n); i++)
 
 using namespace std;
-using ll=long long;
+using ll = long long;
 
 vector<int> dx = {0, 1, 0, -1};
 vector<int> dy = {1, 0, -1, 0};
