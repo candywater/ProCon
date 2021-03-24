@@ -1,0 +1,5 @@
+deploy:
+  provider: script
+  script: git ls-files
+  on: 
+    branch: master
