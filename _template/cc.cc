@@ -15,6 +15,8 @@
 using namespace std;
 using ll = long long;
 
+const double pi = std::acos(-1);
+
 vector<int> dx = {0, 1, 0, -1};
 vector<int> dy = {1, 0, -1, 0};
 
